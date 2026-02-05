@@ -1,6 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 @import "tailwindcss";
 
-:root {
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-white: #fef7ee;
+  --color-yellow-200: #f6c768;
+  --color-gray-500: #6f757c;
+  --color-gray-600: #4d5562;
+  --color-black-50: #1b1d1f;
+  --color-black-100: #111315;
+  --color-brown: #302522;
+  --color-blueSky: #bee3cc;
+  --color-redWhite: #ed735d;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
+  --font-sans: "DM Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-black-100);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+  }
+}
+
+@layer components {
+  .heading {
+    font-size: 2rem;
+  }
+  .label {
+    font-size: var(--text-sm);
+  }
+  .smallText {
+    font-size: 0.625rem;
+  }
+  .priceText {
+    font-size: var(--text-xs);
+  }
+}
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -67,4 +114,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
