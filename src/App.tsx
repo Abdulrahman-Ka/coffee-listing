@@ -1,4 +1,3 @@
-import CoffeeCard from "./components/CoffeeCard";
 import CoffeeList from "./components/CoffeeList";
 
 function App() {
