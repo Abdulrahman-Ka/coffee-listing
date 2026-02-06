@@ -15,7 +15,7 @@ const CoffeeList = () => {
   }, []);
 
   return (
-    <div className="grid sm:grid-cols-3 gap-12 grid-cols-1 sm:gap-8 sm:gap-y-4  w-1/2 sm:w-full sm:px-12 xl:px-28">
+    <div className="grid sm:grid-cols-3 w-full m-0 gap-12 grid-cols-1 sm:gap-8 sm:gap-y-4 sm:w-full sm:px-12 xl:px-28">
       {loading && <p className="text-white text-6xl font-bold">Loading...</p>}
       {error && <p className="text-redWhite">{error}</p>}
       {coffees &&
