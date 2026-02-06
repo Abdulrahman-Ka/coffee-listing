@@ -1,4 +1,6 @@
 import { type Coffee } from "../lib/coffees";
+import Star from "../../public/assets/Star.svg";
+import StarFill from "../../public/assets/Star_fill.svg";
 
 const CoffeeCard = ({
   image,
@@ -9,6 +11,7 @@ const CoffeeCard = ({
   popular = false,
   available,
 }: Coffee) => {
+  const starImg = rating !== null ? StarFill : Star;
   return (
     <div className="bg-transparent text-white  overflow-hidden">
       {/* Image */}
@@ -37,11 +40,11 @@ const CoffeeCard = ({
         </div>
 
         {/* Rating */}
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="flex items-center gap-1 text-sm text-gray-600">
             <img
-              src={`/assets/${rating !== null ? "Star_fill" : "Star"}.svg`}
-              // src={rating? '/asset'}
+              // src={`assets/${rating !== null ? "Star_fill" : "Star"}.svg`}
+              src={starImg}
               alt="rating"
               className="size-6"
             />
