@@ -40,7 +40,8 @@ const CoffeeCard = ({
         <div className="flex justify-between">
           <div className="flex items-center gap-1 text-sm text-gray-600">
             <img
-              src={`/src/assets/${rating ? "Star_fill" : "Star"}.svg`}
+              src={`/assets/${rating !== null ? "Star_fill" : "Star"}.svg`}
+              // src={rating? '/asset'}
               alt="rating"
               className="size-6"
             />
